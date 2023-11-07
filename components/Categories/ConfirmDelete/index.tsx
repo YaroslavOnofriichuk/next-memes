@@ -1,3 +1,4 @@
+import { RefObject } from "react";
 import Image from "next/image";
 import styles from "./confirm.module.css";
 import { useOutsideClick } from "../../../hooks/useOutsideClick";
@@ -10,6 +11,7 @@ export default function Confirm(props: Props) {
     const ref = useOutsideClick(() => props.onClick(false));
     
     return (
+        //@ts-ignore
         <div className={styles.confirm} ref={ref}>
             <p className={styles.title}>Delete the Category?</p>
             <p className={styles.text}>
